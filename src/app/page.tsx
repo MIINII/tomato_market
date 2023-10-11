@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className='bg-slate-400 py-10 px-10 grid gap-10 min-h-screen'>
-      {/* 체크아웃 */}
+      {/* ANCHOR 체크아웃 */}
       <div className='bg-white p-6 rounded-3xl shadow-xl'>
         <span className='font-semibold text-2xl'>상품 선택</span>
 
@@ -15,7 +15,7 @@ export default function Home() {
         </ul>
         <ul>
           {['a', 'b', 'c', ''].map((c, i) => (
-            <li className='empty:bg-red-50 py-2' key={i}>
+            <li className='empty:hidden' key={i}>
               {c}
             </li>
           ))}
@@ -30,8 +30,8 @@ export default function Home() {
         <button className='mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-1/2 mx-auto hover:bg-blue-700 active:bg-slate-700'>결제하기</button>
       </div>
 
-      {/* profile */}
-      <div className='bg-white overflow-hidden rounded-3xl shadow-xl'>
+      {/* ANCHOR 프로필 */}
+      <div className='bg-white overflow-hidden rounded-3xl shadow-xl group'>
         <div className='bg-blue-500 p-6 pb-14'>
           <span className='text-white text-2xl font-semibold'>프로필</span>
         </div>
@@ -41,15 +41,18 @@ export default function Home() {
               <span className='text-sm text-gray-500'>주문수</span>
               <span className='font-medium'>340</span>
             </div>
+
+            {/* 아바타 */}
             <img
-              src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvWgnzOQOnkYba1z6a2lQ1UxQQw2a6Am3JA&usqp=CAU'
+              // src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvWgnzOQOnkYba1z6a2lQ1UxQQw2a6Am3JA&usqp=CAU'
               alt='mimoji'
-              className='w-24 h-24 rounded-full shadow-xl'
+              className='w-24 h-24 rounded-full shadow-xl group-hover:bg-red-300 transition-colors'
             />
+
             <div className='flex flex-col items-center'>
               <span className='text-sm text-gray-500'>소비</span>
               <span className='font-medium'>$340</span>
-            </div>
+            </div> 
           </div>
           <div className='relative  flex flex-col items-center -mt-10 -mb-5'>
             <span className='text-lg font-medium'>민수</span>
@@ -58,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 의자 */}
+      {/* ANCHOR 의자 */}
       <div className='bg-white p-6 rounded-3xl shadow-xl'>
         <div className='flex mb-5 justify-between items-center'>
           <span>⬅️</span>
@@ -89,6 +92,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 }
