@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <div className='bg-slate-400 py-10 px-10 grid gap-10 min-h-screen'>
+    <div className='bg-slate-400 xl:place-content-center py-10 px-10 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen'>
       {/* ANCHOR 체크아웃 */}
-      <div className='bg-white p-6 rounded-3xl shadow-xl'>
+      <div className='bg-white flex flex-col justify-between p-6 rounded-3xl shadow-xl'>
         <span className='font-semibold text-2xl'>상품 선택</span>
 
         <ul>
@@ -25,14 +25,15 @@ export default function Home() {
           <span>총 금액</span>
           <span className='font-semibold'>200,000원</span>
         </div>
-        <div></div>
 
-        <button className='mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-1/2 mx-auto hover:bg-blue-700 active:bg-slate-700'>결제하기</button>
+        <button className='mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-3/4 block mx-auto hover:bg-slate-500 hover:text-white focus:border-2 focus:border-blue-500 focus:bg-white focus:text-blue-500'>
+          결제하기
+        </button>
       </div>
 
       {/* ANCHOR 프로필 */}
       <div className='bg-white overflow-hidden rounded-3xl shadow-xl group'>
-        <div className='bg-blue-500 p-6 pb-14'>
+        <div className='bg-blue-500 landscape:bg-blue-500 portrait:bg-slate-600 p-6 pb-14 xl:pb-36'>
           <span className='text-white text-2xl font-semibold'>프로필</span>
         </div>
         <div className='rounded-3xl p-6 bg-white relative -top-5'>
@@ -44,7 +45,7 @@ export default function Home() {
 
             {/* 아바타 */}
             <img
-              // src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvWgnzOQOnkYba1z6a2lQ1UxQQw2a6Am3JA&usqp=CAU'
+              src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvWgnzOQOnkYba1z6a2lQ1UxQQw2a6Am3JA&usqp=CAU'
               alt='mimoji'
               className='w-24 h-24 rounded-full shadow-xl group-hover:bg-red-300 transition-colors'
             />
@@ -52,7 +53,7 @@ export default function Home() {
             <div className='flex flex-col items-center'>
               <span className='text-sm text-gray-500'>소비</span>
               <span className='font-medium'>$340</span>
-            </div> 
+            </div>
           </div>
           <div className='relative  flex flex-col items-center -mt-10 -mb-5'>
             <span className='text-lg font-medium'>민수</span>
@@ -62,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* ANCHOR 의자 */}
-      <div className='bg-white p-6 rounded-3xl shadow-xl'>
+      <div className='bg-white p-6 rounded-3xl shadow-xl lg:col-span-2 xl:col-span-1'>
         <div className='flex mb-5 justify-between items-center'>
           <span>⬅️</span>
           <div className='space-x-3'>
@@ -70,7 +71,7 @@ export default function Home() {
             <span className='shadow-xl p-2 rounded-md'>💖</span>
           </div>
         </div>
-        <img src='https://i.ibb.co/5963kz8/chair.jpg' alt='chair' />
+        <img src='https://i.ibb.co/5963kz8/chair.jpg' alt='chair' className='mx-auto'/>
         <div className='flex flex-col'>
           <span className='font-medium text-xl'>Swoon Lounge</span>
           <span className='text-xs text-gray-500'>Chair</span>
@@ -92,8 +93,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
